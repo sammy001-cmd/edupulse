@@ -1,0 +1,28 @@
+{
+    "classification_results": {
+        "Logistic Regression": {
+            "accuracy": 0.8995215311004785,
+            "f1_score": 0.7741935483870968
+        },
+        "Random Forest": {
+            "accuracy": 0.9090909090909091,
+            "f1_score": 0.7912087912087912
+        },
+        "Gradient Boosting": {
+            "accuracy": 0.8995215311004785,
+            "f1_score": 0.7835051546391752
+        }
+    },
+    "regression_results": {
+        "Random Forest Regressor": {
+            "r2": 0.8261845891131039,
+            "rmse": 1.6393073137455105
+        },
+        "Gradient Boosting Regressor": {
+            "r2": 0.8314425079250839,
+            "rmse": 1.614322378588727
+        }
+    },
+    "best_classification_model": "RandomForestClassifier",
+    "best_regression_model": "GradientBoostingRegressor"
+}

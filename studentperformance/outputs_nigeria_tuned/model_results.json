@@ -1,0 +1,133 @@
+{
+  "dataset_context": "Nigerian university academic records",
+  "records": 1841,
+  "target_definition": "Low academic performance is operationalised as final CGPA at or below the 25th percentile of this Nigerian institutional dataset.",
+  "low_performance_cgpa_threshold": 3.10087719298246,
+  "median_cgpa": 3.60352422907489,
+  "upper_quartile_cgpa": 4.05529953917051,
+  "low_performance_cases": 461,
+  "low_performance_prevalence": 0.25040738728951656,
+  "features": [
+    "programme",
+    "gpa_100",
+    "gpa_200",
+    "gpa_300"
+  ],
+  "selected_classifier": "Gradient Boosting",
+  "selected_classifier_probability_threshold": 0.4843046123347826,
+  "selected_regressor": "Gradient Boosting Regressor",
+  "classification_results": {
+    "Logistic Regression": {
+      "best_params": {
+        "model__C": 2.0
+      },
+      "cv_f1_mean": 0.9027038571741269,
+      "cv_f1_std": 0.016555764660425906,
+      "tuned_probability_threshold": 0.5915366940545483,
+      "tuned_threshold_metrics": {
+        "accuracy": 0.9539295392953929,
+        "precision": 0.8712871287128713,
+        "recall": 0.9565217391304348,
+        "specificity": 0.9530685920577617,
+        "f1": 0.9119170984455959,
+        "roc_auc": 0.9895228378590488,
+        "confusion_matrix": [
+          [
+            264,
+            13
+          ],
+          [
+            4,
+            88
+          ]
+        ]
+      }
+    },
+    "Random Forest": {
+      "best_params": {
+        "model__max_depth": null,
+        "model__max_features": "sqrt",
+        "model__min_samples_leaf": 2,
+        "model__n_estimators": 250
+      },
+      "cv_f1_mean": 0.9027598700292679,
+      "cv_f1_std": 0.012365305436550435,
+      "tuned_probability_threshold": 0.6068445887445886,
+      "tuned_threshold_metrics": {
+        "accuracy": 0.948509485094851,
+        "precision": 0.9010989010989011,
+        "recall": 0.8913043478260869,
+        "specificity": 0.9675090252707581,
+        "f1": 0.8961748633879781,
+        "roc_auc": 0.9857557683252237,
+        "confusion_matrix": [
+          [
+            268,
+            9
+          ],
+          [
+            10,
+            82
+          ]
+        ]
+      }
+    },
+    "Gradient Boosting": {
+      "best_params": {
+        "model__learning_rate": 0.1,
+        "model__max_depth": 1,
+        "model__n_estimators": 150
+      },
+      "cv_f1_mean": 0.9060816267826125,
+      "cv_f1_std": 0.0159434832449156,
+      "tuned_probability_threshold": 0.4843046123347826,
+      "tuned_threshold_metrics": {
+        "accuracy": 0.9566395663956639,
+        "precision": 0.9222222222222223,
+        "recall": 0.9021739130434783,
+        "specificity": 0.9747292418772563,
+        "f1": 0.9120879120879121,
+        "roc_auc": 0.9888949929367447,
+        "confusion_matrix": [
+          [
+            270,
+            7
+          ],
+          [
+            9,
+            83
+          ]
+        ]
+      }
+    }
+  },
+  "regression_results": {
+    "Random Forest Regressor": {
+      "best_params": {
+        "model__max_depth": null,
+        "model__max_features": "sqrt",
+        "model__min_samples_leaf": 1,
+        "model__n_estimators": 250
+      },
+      "cv_rmse_mean": 0.14189205348008468,
+      "cv_rmse_std": 0.007997226985296915,
+      "test_r2": 0.9538375187741333,
+      "test_rmse": 0.14035080505955977,
+      "test_mae": 0.10631374877263829
+    },
+    "Gradient Boosting Regressor": {
+      "best_params": {
+        "model__learning_rate": 0.1,
+        "model__max_depth": 2,
+        "model__min_samples_leaf": 1,
+        "model__n_estimators": 100
+      },
+      "cv_rmse_mean": 0.13657464050954418,
+      "cv_rmse_std": 0.005132222160074881,
+      "test_r2": 0.955560592307264,
+      "test_rmse": 0.13770650849187782,
+      "test_mae": 0.10487949579181645
+    }
+  },
+  "warning_logic_note": "Early-warning levels combine predicted final CGPA, probability of a bottom-quartile academic outcome, and declining GPA trajectory."
+}

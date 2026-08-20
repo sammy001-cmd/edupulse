@@ -1,0 +1,78 @@
+{
+  "dataset_context": "Nigerian university academic records",
+  "records": 1841,
+  "risk_threshold_cgpa": 2.0,
+  "features": [
+    "programme",
+    "gpa_100",
+    "gpa_200",
+    "gpa_300"
+  ],
+  "selected_classifier": "Random Forest",
+  "selected_regressor": "Gradient Boosting Regressor",
+  "classification_results": {
+    "Logistic Regression": {
+      "accuracy": 0.959349593495935,
+      "precision": 0.17647058823529413,
+      "recall": 0.75,
+      "f1": 0.2857142857142857,
+      "roc_auc": 0.9897260273972603,
+      "confusion_matrix": [
+        [
+          351,
+          14
+        ],
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    "Random Forest": {
+      "accuracy": 0.991869918699187,
+      "precision": 0.6666666666666666,
+      "recall": 0.5,
+      "f1": 0.5714285714285714,
+      "roc_auc": 0.9952054794520547,
+      "confusion_matrix": [
+        [
+          364,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    "Gradient Boosting": {
+      "accuracy": 0.989159891598916,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "roc_auc": 0.9910958904109589,
+      "confusion_matrix": [
+        [
+          363,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    }
+  },
+  "regression_results": {
+    "Random Forest Regressor": {
+      "r2": 0.9512645359210152,
+      "rmse": 0.14492284411833906,
+      "mae": 0.10746855105778066
+    },
+    "Gradient Boosting Regressor": {
+      "r2": 0.9541547848968851,
+      "rmse": 0.1405598557853522,
+      "mae": 0.10360689543245225
+    }
+  }
+}
