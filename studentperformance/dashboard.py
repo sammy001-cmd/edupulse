@@ -23,18 +23,66 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-OUTPUT_DIR = "outputs_nigeria_tuned"
-RESULTS_PATH = os.path.join(OUTPUT_DIR, "model_results.json")
-SCREENING_PATH = os.path.join(OUTPUT_DIR, "student_risk_screening.csv")
+# ------------------------------------------------------------
+# PROJECT PATHS
+# ------------------------------------------------------------
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-OPERATIONAL_DIR = "operational_data"
-LIVE_CASES_PATH = os.path.join(OPERATIONAL_DIR, "live_cases.csv")
-INTERVENTIONS_PATH = os.path.join(OPERATIONAL_DIR, "interventions.csv")
-FOLLOWUPS_PATH = os.path.join(OPERATIONAL_DIR, "followups.csv")
+OUTPUT_DIR = os.path.join(BASE_DIR, "outputs_nigeria_tuned")
+
+RESULTS_PATH = os.path.join(
+    OUTPUT_DIR,
+    "model_results.json"
+)
+
+SCREENING_PATH = os.path.join(
+    OUTPUT_DIR,
+    "student_risk_screening.csv"
+)
+
+RISK_MODEL_PATH = os.path.join(
+    OUTPUT_DIR,
+    "risk_model.pkl"
+)
+
+CGPA_MODEL_PATH = os.path.join(
+    OUTPUT_DIR,
+    "cgpa_model.pkl"
+)
+
+OPERATIONAL_DIR = os.path.join(
+    BASE_DIR,
+    "operational_data"
+)
+
+LIVE_CASES_PATH = os.path.join(
+    OPERATIONAL_DIR,
+    "live_cases.csv"
+)
+
+INTERVENTIONS_PATH = os.path.join(
+    OPERATIONAL_DIR,
+    "interventions.csv"
+)
+
+FOLLOWUPS_PATH = os.path.join(
+    OPERATIONAL_DIR,
+    "followups.csv"
+)
 
 os.makedirs(OPERATIONAL_DIR, exist_ok=True)
-RISK_MODEL_PATH = os.path.join(OUTPUT_DIR, "risk_model.pkl")
-CGPA_MODEL_PATH = os.path.join(OUTPUT_DIR, "cgpa_model.pkl")
+# OUTPUT_DIR = "outputs_nigeria_tuned"
+# RESULTS_PATH = os.path.join(OUTPUT_DIR, "model_results.json")
+# SCREENING_PATH = os.path.join(OUTPUT_DIR, "student_risk_screening.csv")
+
+# OPERATIONAL_DIR = "operational_data"
+# LIVE_CASES_PATH = os.path.join(OPERATIONAL_DIR, "live_cases.csv")
+# INTERVENTIONS_PATH = os.path.join(OPERATIONAL_DIR, "interventions.csv")
+# FOLLOWUPS_PATH = os.path.join(OPERATIONAL_DIR, "followups.csv")
+
+# os.makedirs(OPERATIONAL_DIR, exist_ok=True)
+# RISK_MODEL_PATH = os.path.join(OUTPUT_DIR, "risk_model.pkl")
+# CGPA_MODEL_PATH = os.path.join(OUTPUT_DIR, "cgpa_model.pkl")
 
 
 # ------------------------------------------------------------
